@@ -44,7 +44,7 @@ function Player() {
 
   useEffect(() => {
     if (spotifyApi.getAccessToken() && !currentTrackId) {
-      //   fetchCurrentTrack();
+      fetchCurrentTrack();
       setVolume(50);
     }
   }, [currentTrackId, spotifyApi]);
@@ -69,7 +69,7 @@ function Player() {
 
   useEffect(() => {
     if (volume > 0 && volume < 100) {
-      //   debouncedAdjustVolume(volume);
+       debouncedAdjustVolume(volume);
     }
   }, [volume]);
 
